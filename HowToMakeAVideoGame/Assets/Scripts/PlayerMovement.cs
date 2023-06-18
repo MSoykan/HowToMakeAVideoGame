@@ -41,6 +41,10 @@ public class PlayerMovement : MonoBehaviour {
             Debug.Log("I value:" + i);
         }
 
+        if(rb.position.y < -1) {
+            GameManager.instance.EndGame();
+        }
+
         //float x = Input.GetAxisRaw("Horizontal");
         //rb.AddForce(x * 200 * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
     }
